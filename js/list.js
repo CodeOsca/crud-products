@@ -14,12 +14,16 @@ function main() {
                 <span class="card-title">
                 ${el.name}
                 <br>
-                ${el.create_at}
+                <small>Actualizado el ${el.create_at}</small>
                 </span>
             </div>
 
             <div class="card-content">
-                <p>${el.description}</p>
+                <p>
+                ${el.description}
+                <br>
+                <strong class="teal-text text-accent-4">Precio ${el.price}</strong>
+                </p>
             </div>
 
             <div class="card-action">
