@@ -6,12 +6,16 @@ const $section = document.querySelector('section.row')
 function main() {
     products.forEach(el => {
         let article = document.createElement('article')
-        article.setAttribute('class', 'col s11 m5 l4')
+        article.setAttribute('class', 'col s12 m6 l5')
         article.innerHTML =
         `<div class="card">
             <div class="card-image">
                 <img src="${el.urlImage}" />
-                <span class="card-title">${el.name} -- ${el.create_at}</span>
+                <span class="card-title">
+                ${el.name}
+                <br>
+                ${el.create_at}
+                </span>
             </div>
 
             <div class="card-content">

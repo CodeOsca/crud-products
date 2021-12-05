@@ -48,4 +48,5 @@ form.addEventListener('submit', e =>{
     let index = products.findIndex( item => item.id === id  )
     products[index] = createProducts()
     localStorage.setItem('products', JSON.stringify(products) )
+    location.href = 'list.html'
 })
