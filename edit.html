@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,19 @@
     <title>Project blee</title>
     <link rel="stylesheet" href="./materialize/css/materialize.min.css">
 </head>
+
 <body>
     <nav>
         <div class="nav-wrapper">
-          <a href="./add.html" class="brand-logo">ProductApp</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="./add.html">Crear</a></li>
-            <li><a href="./list.html">Productos</a></li>
-          </ul>
+            <a href="./add.html" class="brand-logo">ProductApp</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="./add.html">Crear</a></li>
+                <li><a href="./list.html">Productos</a></li>
+                <li><a href="./search.html">Buscar</a></li>
+            </ul>
         </div>
     </nav>
-        
+
 
     <h1>Edita tu producto</h1>
     <main class="container">
@@ -25,37 +28,25 @@
 
             <form id="form" autocomplete="off">
                 <div class="input-field col s12 m6">
-                    <input 
-                        id="name" 
-                        type="text" 
-                        class="validate" 
-                        required
-                        title="El nombre es obligatorio">
+                    <input id="name" type="text" class="validate" required title="El nombre es obligatorio">
                     <label for="name">Nombre del producto</label>
                 </div>
-    
+
                 <div class="input-field col s12 m6">
-                    <input 
-                        id="description" 
-                        type="text" 
-                        class="validate">
+                    <input id="description" type="text" class="validate">
                     <label for="description">Descripción del producto (opcional)</label>
                 </div>
-    
+
                 <div class="input-field col s12 m6">
-                    <input 
-                        id="price" 
-                        type="text" 
-                        class="validate" 
-                        required>
+                    <input id="price" type="text" class="validate" required>
                     <label for="price">Precio del producto</label>
                 </div>
-    
+
                 <div class="input-field col s12 m6">
                     <input id="urlImage" type="text" class="validate">
                     <label for="urlImage">Url de la imagen (opcional)</label>
                 </div>
-    
+
                 <button class="waves-effect waves-light btn">Editar producto</button>
             </form>
         </section>
@@ -65,4 +56,5 @@
     <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
     <script src="./js/edit.js"></script>
 </body>
+
 </html>
