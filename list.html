@@ -29,7 +29,6 @@
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="./add.html">Crear</a></li>
                 <li><a href="./list.html">Productos</a></li>
-                <li><a href="./search.html">Buscar</a></li>
             </ul>
         </div>
     </nav>
@@ -37,6 +36,16 @@
 
     <main class="container">
         <h1>Listado productos</h1>
+
+        <form id="form" autocomplete="off">
+            <div class="input-field col s12 m6">
+                <input id="name" type="text" class="validate" required title="Buscar por nombre">
+                <label for="name">Buscar por nombre</label>
+            </div>
+
+            <button class="waves-effect waves-light btn">Buscar</button>
+        </form>
+        <br>
 
         <section class="row">
 

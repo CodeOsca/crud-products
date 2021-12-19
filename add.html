@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project blee</title>
     <link rel="stylesheet" href="./materialize/css/materialize.min.css">
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -16,7 +19,6 @@
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="./add.html">Crear</a></li>
                 <li><a href="./list.html">Productos</a></li>
-                <li><a href="./search.html">Buscar</a></li>
             </ul>
         </div>
     </nav>
@@ -48,9 +50,12 @@
                     <label for="urlImage">Url de la imagen (opcional)</label>
                 </div>
 
-                <button class="waves-effect waves-light btn">Crear producto</button>
+                <div class="row">
+                    <button style="margin-bottom: 10px;" class="waves-effect waves-light btn col s12 m5 l5">Crear producto</button>
+                    <div class="col s0 m2 l2"></div>
+                    <a style="margin-bottom: 10px;" href="./list.html" class="waves-effect waves-light btn blue col s12 m5 l5">Lista de productos</a>
+                </div>
             </form>
-
 
         </section>
     </main>
