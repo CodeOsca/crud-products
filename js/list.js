@@ -4,12 +4,8 @@ const $section = document.querySelector('section.row')
 const form = document.getElementById('form')
 
 
-function main() {
-    products.forEach(el => {
-        let article = document.createElement('article')
-        article.setAttribute('class', 'col s12 m6')
-        article.innerHTML =
-            `<div class="card">
+function product(el){    
+    return `<div class="card">
             <div class="card-image">
                 <img src="${el.urlImage}" />
                 <span class="card-title">
@@ -28,7 +24,7 @@ function main() {
             </div>
 
             <div class="card-action">
-                <button class="waves-effect waves-light btn">Editar</button>
+                <button class="waves-effect waves-light btn speicin">Editar</button>
                 <button class="waves-effect waves-light btn red" id="${el.id}">Eliminar</button>
             </div>
 
@@ -36,6 +32,15 @@ function main() {
                 <div class="indeterminate"></div>
             </div>
         </div>`
+}
+
+
+
+function main() {
+    products.forEach( el => {
+        let article = document.createElement('article')
+        article.setAttribute('class', 'col s12 m6')
+        article.innerHTML = product(el)
         $section.appendChild(article)
     });
 }
@@ -72,48 +77,20 @@ function redirectEdit(id) {
 
 document.addEventListener('click', e => {
     if (e.target.matches('button[class*="red"]')) confirm(e.target.id)
-    if (e.target.matches('button[class="waves-effect waves-light btn"]')) redirectEdit(e.target.nextElementSibling.id)
+    if (e.target.matches('button[class="waves-effect waves-light btn speicin"]')) redirectEdit(e.target.nextElementSibling.id)
 })
-
 
 
 form.addEventListener('submit', e => {
     e.preventDefault()
     $section.innerHTML = ''
     let productFinded = []
-    products.forEach((product) => {
+    products.forEach( (el) => {
             productFinded.push(product)
-            if (product.name.toUpperCase().includes(e.target.name.value.toUpperCase())) {
+            if (el.name.toUpperCase().includes(e.target.name.value.toUpperCase())) {
                 let article = document.createElement('article')
                 article.setAttribute('class', 'col s12 m6')
-                article.innerHTML =
-                    `<div class="card">
-            <div class="card-image">
-                <img src="${product.urlImage}" />
-                <span class="card-title">
-                ${product.name}
-                <br>
-                <small>Actualizado el ${product.create_at}</small>
-                </span>
-            </div>
-
-            <div class="card-content">
-                <p>
-                ${product.description}
-                <br>
-                <strong class="teal-text text-accent-4">Precio ${product.price}</strong>
-                </p>
-            </div>
-
-            <div class="card-action">
-                <button class="waves-effect waves-light btn">Editar</button>
-                <button class="waves-effect waves-light btn red" id="${product.id}">Eliminar</button>
-            </div>
-
-            <div class="progress">
-                <div class="indeterminate"></div>
-            </div>
-        </div>`
+                article.innerHTML = product(el)
                 $section.appendChild(article)
             }
 
